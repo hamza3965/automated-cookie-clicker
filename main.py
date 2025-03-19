@@ -56,13 +56,13 @@ while True:
                 affordable_upgrades[cost] = id
 
         # Purchase the most expensive affordable upgrade
-        # try:
-        #     highest_price_affordable_upgrade = max(affordable_upgrades)
-        # except ValueError:
-        #     pass
-        # else:
-        #     to_purchase_id = affordable_upgrades[highest_price_affordable_upgrade]
-        #     driver.find_element(by=By.ID, value=to_purchase_id).click()
+        try:
+            highest_price_affordable_upgrade = max(affordable_upgrades)
+        except ValueError:
+            pass
+        else:
+            to_purchase_id = affordable_upgrades[highest_price_affordable_upgrade]
+            driver.find_element(by=By.ID, value=to_purchase_id).click()
 
         # Add another 5 seconds until the next check
         timeout = time.time() + 5
